@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap')
+@import './variables'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Roboto', sans-serif
+
+
+.header
+    padding: 40px 113px
+    @include centering
+    justify-content: space-between
+    nav
+        @include centering
+        gap: 40px
+        span
+            justify-content: center
+            i
+                margin-left: 20px
+
+.promo
+    @include centering
+    padding: 0 113px
+    gap: 30px
+    &-left
+        width: 40%
+        h1
+            font-size: 4.5rem
+            /* width: 50% */
+            span
+                color: #FF8A56
+        p
+            font-size: 1.375rem
+            color: #666
+            /* width: 50% */
+            margin-top: 34px
+        &_btns
+            margin-top: 38px
+            &_call, &_dl
+                padding: 20px 30px
+                font-size: 1rem
+                border: none
+                cursor: pointer
+            &_call
+                background-color: #000
+                color: #fff
+                transition: all .3s ease-in-out
+                &:hover
+                    background-color: #fff
+                    outline: 1px solid #000
+                    color: #000
+                    font-weight: 500
+                    transition: all .3s ease-in-out
+            &_dl
+                background-color: transparent
+                &:hover i
+                    margin-left: 20px
+                    transition: all .3s ease-in-out
+                i
+                    margin-left: 10px
+                    transition: all .3s ease-in-out
+
+.ipsum
+    align-items: center
+    justify-content: center
+    display: flex
+    flex-direction: column  
+    gap: 45px
+    span
+        font-size: 18px
+    &-logo
+        display: flex   
+        gap: 100px   
+
+.intro 
+    align-items: center
+    justify-content: center
+    display: flex
+    padding-top: 156px
+    flex-direction: column
+    span
+        color: #FF5E69 
+        font-size: 22px
+    h2
+        width: 768px    
+        font-size: 54px
+        text-align: center
+
+.midone
+    display: flex
+    justify-content: center
+    gap: 90px       
+    padding-top: 115px
+    &-item
+        display: flex
+        justify-content: center
+        width: 306px
+        flex-direction: column
+        gap: 10px  
+        
+        img
+            width: 70px
+            height: 70px
+
+
+
+.about
+    position: relative
+    padding-left: 12px
+.about:before
+    content: ''
+    width: 7px
+    height: 7px
+    background-color: #000
+    position: absolute
+    left: - 2px
+    top: 50%
+    transform: translateY(-50%)
+
+.projects
+    overflow-x: hidden
+    padding: 160px 16% 370px 16%
+    // @include centering
+    // justify-content: space-between
+    &-top
+        @include centering
+        justify-content: space-between
+    &_text
+        span
+            color: #B16CEA
+            font-size: 22px
+        p
+            font-size: 54px
+    &_btn
+        &_b
+            padding: 20px 30px
+            font-size: 1rem
+            border: none
+            cursor: pointer
+            background-color: #000
+            color: #fff
+            transition: all .5s ease-in-out
+
+            &:hover
+                background-color: #fff
+                outline: 1px solid #000
+                color: #000
+                font-weight: 500
+                transition: all .5s ease-in-out
+    &_slider
+        /* margin-right: -40% */
+        margin-top: 70px
+        height: 468px
+        /* overflow: hidden */
+        position: absolute
+        &-cards-holder
+            display: flex
+            justify-content: flex-end
+            gap: 24px
+        &-card
+            &-bottom
+                height: 35%
+                padding: 33px
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                gap: 18px
+                background: #fff
+                button
+                    background: transparent
+                    border: none
+                    font-size: 1.2rem
+                    i
+                        margin-left: 10px
+            &-header
+                span
+                    text-transform: uppercase
+                    color: #3C46FF
+                    letter-spacing: 4px
+                    font-weight: 700
+                    font-size: .875rem
+            &-desc-header
+                p
+                    font-size: 1.5rem
+                    font-weight: 700
+    &_sliderBtns
+        display: flex
+        justify-content: flex-end
+        gap: 10px
+        padding-right: 300px
+        button
+            width: 54px
+            height: 54px
+            background: #fff
+            border: none
+
+.blogs
+    height: 800px
+    background: #000
+    display: flex
+    &-left
+        color: #fff
+
+.designer
+    padding: 155px 113px
+    width: 100%
+    &-top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        &_header
+            span
+                color: #FF5E69
+                font-size: 1.375rem
+                font-weight: 700
+                text-transform: uppercase
+                letter-spacing: 4px
+            p
+                font-size: 3.375rem
+                font-weight: 700
+        &_desc
+            width: 51%
+            p
+                color: #666
+                font-size: 1.375rem
+    &-images
+        @include centering
+        align-items: flex-start
+        gap: 16px
+        padding-top: 115px
+        &_item
+            display: flex
+            flex-direction: column
+            gap: 16px
+            transition: all .3s ease-in-out
+            &_top
+                width: 338px
+                height: 305px
+                transition: all .3s ease-in-out
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+            &:not(:nth-child(3)):hover
+                transform: scale(1.01)
+                cursor: pointer
+                transition: all .3s ease-in-out
+            &_bot
+                transition: all .3s ease-in-out
+            &_top:hover, &_bot:hover
+                transform: scale(1.01)
+                cursor: pointer
+                transition: all .3s ease-in-out
+
+.experience
+    padding: 154px 113px
+    display: flex
+    gap: 48px
+    width: 100%
+    &-edu
+        width: 50%
+        &_header
+            margin-bottom: 83px
+            p
+                font-size: 2.25rem
+        &_list
+            &_item
+                display: flex
+                position: relative
+                justify-content: space-between
+                padding-right: 60px
+                padding-bottom: 40px
+                margin-bottom: 32px
+                border-bottom: 1px solid #E5E5E5
+                &-holder
+                    display: flex
+                    gap: 20px
+                &-name
+                    p
+                        font-size: 1.5rem
+                        font-weight: 700
+                        margin-bottom: 9px
+                    span
+                        color: rgba(0, 0, 0, 0.60)
+                #arrow
+                    position: absolute
+                    right: 0
+                    top: 0
+                &-year
+                    padding-top: 35px
+                    color: rgba(0, 0, 0, 0.60)
+
+                        
+
+                
+
+                
+            
+
+        
+
+
+            
+
+          
+
+
+
